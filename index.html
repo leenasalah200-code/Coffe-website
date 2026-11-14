@@ -83,10 +83,6 @@ nav a:hover {
     text-decoration: none;
 }
 
-.btn:hover {
-    background: #a96e3d;
-}
-
 section {
     padding: 65px 8%;
     text-align: center;
@@ -104,27 +100,39 @@ h2 {
     line-height: 1.8;
 }
 
+/* MENU */
+
 .menu {
     background: #eee1d0;
 }
 
 .menu-items {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    margin-top: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    margin-top: 35px;
 }
 
 .card {
     background: white;
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px #0001;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px #0002;
     transition: 0.3s;
 }
 
 .card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-7px);
+}
+
+.card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
 }
 
 .card h3 {
@@ -136,7 +144,10 @@ h2 {
     color: #b47a43;
     font-weight: bold;
     margin-top: 12px;
+    font-size: 18px;
 }
+
+/* COFFEE MOMENTS */
 
 .moments {
     display: grid;
@@ -152,6 +163,8 @@ h2 {
     border-radius: 12px;
 }
 
+/* CONTACT */
+
 .contact {
     background: #eee1d0;
     line-height: 2.2;
@@ -165,7 +178,6 @@ footer {
 }
 
 @media(max-width: 600px) {
-
     header {
         justify-content: center;
         gap: 15px;
@@ -178,23 +190,14 @@ footer {
     .hero h1 {
         font-size: 32px;
     }
-
-    .logo {
-        text-align: center;
-    }
 }
 </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
-
 <header>
-
-    <div class="logo">
-        The Original Coffee Taste ☕
-    </div>
+    <div class="logo">The Original Coffee Taste ☕</div>
 
     <nav>
         <a href="#home">Home</a>
@@ -203,38 +206,21 @@ footer {
         <a href="#moments">Moments</a>
         <a href="#contact">Contact</a>
     </nav>
-
 </header>
-
 
 <!-- HOME -->
 
 <div class="hero" id="home">
-
     <div>
-
-        <h1>
-            The Original<br>
-            Coffee Taste
-        </h1>
-
-        <p>
-            Enjoy Every Cup, Enjoy Every Moment.
-        </p>
-
-        <a href="#menu" class="btn">
-            Explore Our Menu
-        </a>
-
+        <h1>The Original<br>Coffee Taste</h1>
+        <p>Enjoy Every Cup, Enjoy Every Moment.</p>
+        <a href="#menu" class="btn">Explore Our Menu</a>
     </div>
-
 </div>
-
 
 <!-- ABOUT -->
 
 <section class="about" id="about">
-
     <h2>About Us</h2>
 
     <p>
@@ -245,120 +231,125 @@ footer {
         Enjoy fresh coffee, beautiful moments,
         and a warm atmosphere.
     </p>
-
 </section>
-
 
 <!-- MENU -->
 
 <section class="menu" id="menu">
 
     <h2>Our Menu</h2>
-
-    <p>
-        Discover Your Favorite Coffee.
-    </p>
+    <p>Discover Your Favorite Coffee.</p>
 
     <div class="menu-items">
 
         <div class="card">
-            <h3>Classic Espresso</h3>
-            <p>Rich and bold coffee.</p>
-            <div class="price">$3.00</div>
-        </div>
+            <img src="https://images.unsplash.com/photo-1510707577719-ae7c14805e76?w=600"
+            alt="Classic Espresso">
 
-<div class="card">
-            <h3>Iced Latte</h3>
-            <p>Cold coffee with creamy milk.</p>
-            <div class="price">$4.50</div>
-        </div>
-
-        <div class="card">
-            <h3>Cappuccino</h3>
-            <p>Espresso with smooth milk foam.</p>
-            <div class="price">$4.00</div>
+<div class="card-content">
+                <h3>Classic Espresso</h3>
+                <p>Rich and bold coffee.</p>
+                <div class="price">$3.00</div>
+            </div>
         </div>
 
         <div class="card">
-            <h3>Caramel Cloud</h3>
-            <p>Sweet caramel coffee.</p>
-            <div class="price">$5.00</div>
+            <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=600"
+            alt="Iced Latte">
+
+            <div class="card-content">
+                <h3>Iced Latte</h3>
+                <p>Cold coffee with creamy milk.</p>
+                <div class="price">$4.50</div>
+            </div>
         </div>
 
         <div class="card">
-            <h3>Vanilla Latte</h3>
-            <p>Delicious vanilla flavor.</p>
-            <div class="price">$4.75</div>
+            <img src="https://images.unsplash.com/photo-1570968915860-54d5c301fa9f?w=600"
+            alt="Cappuccino">
+
+            <div class="card-content">
+                <h3>Cappuccino</h3>
+                <p>Espresso with smooth milk foam.</p>
+                <div class="price">$4.00</div>
+            </div>
         </div>
 
         <div class="card">
-            <h3>Coffee & Treat</h3>
-            <p>Coffee served with a sweet treat.</p>
-            <div class="price">$6.00</div>
+            <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=600"
+            alt="Caramel Coffee">
+
+            <div class="card-content">
+                <h3>Caramel Cloud</h3>
+                <p>Sweet caramel coffee.</p>
+                <div class="price">$5.00</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600"
+            alt="Vanilla Latte">
+
+            <div class="card-content">
+                <h3>Vanilla Latte</h3>
+                <p>Delicious vanilla flavor.</p>
+                <div class="price">$4.75</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600"
+            alt="Coffee and Treat">
+
+            <div class="card-content">
+                <h3>Coffee & Treat</h3>
+                <p>Coffee served with a sweet treat.</p>
+                <div class="price">$6.00</div>
+            </div>
         </div>
 
     </div>
-
 </section>
-
 
 <!-- COFFEE MOMENTS -->
 
 <section id="moments">
-
     <h2>Coffee Moments</h2>
-
-    <p>
-        Little Moments, Beautiful Memories.
-    </p>
+    <p>Little Moments, Beautiful Memories.</p>
 
     <div class="moments">
 
-        <img
-        src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=500"
+        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=500"
         alt="Coffee">
 
-        <img
-        src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=500"
+        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=500"
         alt="Coffee Cup">
 
-        <img
-        src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?w=500"
+        <img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?w=500"
         alt="Coffee Shop">
 
     </div>
-
 </section>
-
 
 <!-- CONTACT -->
 
 <section class="contact" id="contact">
-
     <h2>Contact Us</h2>
 
     <p>📍 Our Location: Al Riyadh, Khartoum, Sudan</p>
-
     <p>📞 Phone: +1 234 567 890</p>
-
     <p>✉️ Email: hello@theoriginalcoffeetaste.com</p>
-
     <p>🕒 Opening Hours: Every Day, 8 AM – 10 PM</p>
-
 </section>
-
 
 <!-- FOOTER -->
 
 <footer>
-
     <p>
         © 2026 The Original Coffee Taste.
         All Rights Reserved.
     </p>
-
 </footer>
 
 </body>
-</html>                                                                                        
-   
+</html>
